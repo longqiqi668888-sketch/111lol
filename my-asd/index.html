@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Product Website</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f9;
+    text-align: center;
+}
+
+header {
+    background: #24292e;
+    color: white;
+    padding: 30px;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #2ea44f;
+    color: white;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #22863a;
+}
+
+.catalog {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>My GitHub Deployed Website</h1>
+    <p>Simple Catalog with 3 Buttons</p>
+</header>
+
+<div>
+    <button onclick="showCatalog('cat1')">Catalog 1</button>
+    <button onclick="showCatalog('cat2')">Catalog 2</button>
+    <button onclick="showCatalog('cat3')">Catalog 3</button>
+</div>
+
+<div id="cat1" class="catalog">
+    <h2>Catalog 1</h2>
+    <p>Product A</p>
+    <p>Product B</p>
+</div>
+
+<div id="cat2" class="catalog">
+    <h2>Catalog 2</h2>
+    <p>Service A</p>
+    <p>Service B</p>
+</div>
+
+<div id="cat3" class="catalog">
+    <h2>Catalog 3</h2>
+    <p>Package A</p>
+    <p>Package B</p>
+</div>
+
+<script>
+function showCatalog(id) {
+    document.querySelectorAll('.catalog').forEach(el => {
+        el.style.display = 'none';
+    });
+    document.getElementById(id).style.display = 'block';
+}
+</script>
+
+</body>
+</html>
